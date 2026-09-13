@@ -1,0 +1,59 @@
+    Finished `dev` profile [unoptimized] target(s) in 0.44s
+   Compiling cordis-wasm v0.1.0 (/Users/ozzy/project/one/harness-poc/crates/cordis-wasm)
+   Compiling cordis-host v0.1.0 (/Users/ozzy/project/one/harness-poc/crates/cordis-host)
+    Finished `test` profile [unoptimized] target(s) in 6.05s
+warning: the following packages contain code that will be rejected by a future version of Rust: block v0.1.6
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+     Running unittests src/lib.rs (target/debug/deps/cordis_core-42466052c33bfadc)
+
+running 5 tests
+test tests::realms_and_resource_owners_are_enforced ... ok
+test tests::failed_cleanup_retains_ownership ... ok
+test tests::pending_acquisition_lands_into_release_after_retirement ... ok
+test tests::dependent_lease_precedes_provider_pool_cleanup ... ok
+test tests::committed_view_is_not_rebound_and_old_actions_fail ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/cordis_host-da84cf26d4d59359)
+
+running 1 test
+test storage::tests::batch_rollback_and_namespace_isolation ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/cordis_host-188e80e30924615a)
+
+running 1 test
+test tests::stale_snapshot_preserves_native_ime_and_reload_restores_text ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running tests/runtime.rs (target/debug/deps/runtime-c2d5828bcb958793)
+
+running 3 tests
+test new_service_contract_requires_no_host_interface ... ok
+test failed_replacement_and_failed_remount_leave_no_false_success ... ok
+test real_components_persist_reconnect_and_recover ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 24.64s
+
+     Running unittests src/lib.rs (target/debug/deps/cordis_wasm-297f809ce8d030fc)
+
+running 1 test
+test tests::compilation_is_not_enough_to_accept_an_incompatible_component ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/debug/deps/cordis_wire-137baa40f2334e3b)
+
+running 1 test
+test tests::duplicate_identity_is_rejected ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+    Checking cordis-wasm v0.1.0 (/Users/ozzy/project/one/harness-poc/crates/cordis-wasm)
+    Checking cordis-host v0.1.0 (/Users/ozzy/project/one/harness-poc/crates/cordis-host)
+    Finished `dev` profile [unoptimized] target(s) in 1.91s
+warning: the following packages contain code that will be rejected by a future version of Rust: block v0.1.6
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`

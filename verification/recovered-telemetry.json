@@ -1,0 +1,12 @@
+{
+    "host_pid": 96092,
+    "guest_calls": 31,
+    "owned_effects": 2,
+    "active_generations": 2,
+    "blocked_generations": 0,
+    "draw_count": 246,
+    "draw_samples": 246,
+    "draw_p50_us": 8224,
+    "draw_p95_us": 12166,
+    "draw_max_us": 13339
+}

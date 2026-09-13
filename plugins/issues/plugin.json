@@ -1,0 +1,51 @@
+{
+  "abi": 1,
+  "id": "issues",
+  "requires": {},
+  "provides": {
+    "issues": {
+      "version": 1,
+      "methods": {
+        "list": {
+          "input": {
+            "type": "object",
+            "fields": {}
+          },
+          "output": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "completed_day": {
+                  "type": "nullable",
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delay": {
+          "input": {
+            "type": "object",
+            "fields": {}
+          },
+          "output": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  },
+  "capabilities": [
+    "storage"
+  ],
+  "view_query": "list"
+}

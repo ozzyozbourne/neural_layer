@@ -1,0 +1,49 @@
+{
+  "abi": 1,
+  "id": "calendar",
+  "requires": {
+    "issues": {
+      "version": 1,
+      "methods": {
+        "list": {
+          "input": {
+            "type": "object",
+            "fields": {}
+          },
+          "output": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "fields": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "completed_day": {
+                  "type": "nullable",
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delay": {
+          "input": {
+            "type": "object",
+            "fields": {}
+          },
+          "output": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  },
+  "provides": {},
+  "capabilities": [],
+  "view_query": "refresh"
+}

@@ -1,0 +1,12 @@
+[package]
+name = "issues-plugin"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wit-bindgen.workspace = true
+cordis-wire.workspace = true
+serde_json.workspace = true

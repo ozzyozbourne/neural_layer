@@ -1,0 +1,22 @@
+[package]
+name = "cordis-host"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+cordis-core.workspace = true
+cordis-wire.workspace = true
+cordis-wasm.workspace = true
+anyhow.workspace = true
+serde_json.workspace = true
+rusqlite = { version = "0.32", features = ["bundled"] }
+gpui-kit = { path = "../../../gpui-kit/crates/kit", features=["profiler"] }
+wasmtime.workspace = true
+serde.workspace = true
+smol = "2"
+chrono = "0.4"
+
+sha2 = "0.10"
+
+[dev-dependencies]
+gpui-kit = { path = "../../../gpui-kit/crates/kit", features = ["test-support"] }

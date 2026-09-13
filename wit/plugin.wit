@@ -1,0 +1,20 @@
+package poc:harness@0.1.0;
+
+interface host {
+    // Encoded values are bounded and validated by the host, never executable code.
+    storage: func(operation: string, payload: string) -> result<string, string>;
+    call: func(service: string, method: string, payload: string) -> result<string, string>;
+    acquire: func(kind: string) -> result<u64, string>;
+    release: func(handle: u64) -> result<_, string>;
+    // Bounded diagnostic wait; cancellation observes generation retirement.
+    pause: func(milliseconds: u32) -> result<_, string>;
+}
+
+world plugin {
+    import host;
+    export activate: func(config: string) -> result<_, string>;
+    export deactivate: func() -> result<_, string>;
+    export dispatch: func(method: string, payload: string) -> result<string, string>;
+    export render: func(input: string) -> result<string, string>;
+    export handle-action: func(action: string) -> result<_, string>;
+}

@@ -1,0 +1,22 @@
+[workspace]
+members = ["crates/*", "plugins/*"]
+default-members = ["crates/cordis-host"]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+publish = false
+
+[workspace.dependencies]
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+cordis-core = { path = "crates/cordis-core" }
+cordis-wire = { path = "crates/cordis-wire" }
+cordis-wasm = { path = "crates/cordis-wasm" }
+wasmtime = { version = "=48.0.0", default-features = false, features = ["component-model", "cranelift", "runtime", "std", "anyhow"] }
+wit-bindgen = "0.46"
+
+[profile.dev]
+debug = 0

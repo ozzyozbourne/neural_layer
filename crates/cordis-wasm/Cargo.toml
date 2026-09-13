@@ -1,0 +1,11 @@
+[package]
+name = "cordis-wasm"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+cordis-core.workspace = true
+cordis-wire.workspace = true
+wasmtime.workspace = true
+anyhow.workspace = true
+serde_json.workspace = true
